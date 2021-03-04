@@ -205,7 +205,7 @@ const main = async () => {
         type: mode.replace("jpg", "jpeg"),
         omitBackground: mode === "png",
       })
-      ctx.set("Cache-Control", "max-age=600, public, stale-while-revalidate")
+      ctx.set("Cache-Control", "max-age=31536000, public, stale-while-revalidate")
       ctx.type = mime
       ctx.body = buffer
     } catch (error) {
